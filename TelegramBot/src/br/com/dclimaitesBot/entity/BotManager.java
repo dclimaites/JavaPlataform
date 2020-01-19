@@ -28,7 +28,10 @@ public class BotManager extends TimerTask {
 	private int offSet;
 	private MessageManager messageManager;
 	private Map<String, Cliente> clientes;
-
+	/**
+	 *Gerenciador do BOT, responsável por intermediar a comunicação entre o Telegram e as regras de negócio
+	 *
+	 */
 	public BotManager() {
 		bot = TelegramBotAdapter.build("988597064:AAHDM9tK1-wt52z4rfE8wqsYBFlqogTBZeA");
 		offSet = 867355896;
@@ -37,6 +40,9 @@ public class BotManager extends TimerTask {
 	}
 
 	@Override
+	/**
+	 * Execução do BOT
+	 */
 	public void run() {
 
 		try {
@@ -78,7 +84,11 @@ public class BotManager extends TimerTask {
 		}
 
 	}
-
+	/**
+	 * Adiciona um cliente a lista de controle do BOT
+	 * @param chatIdCliente ID do cliente para manipulação dos dados do cliente
+	 * @return Retorna os dados do cliente
+	 */
 	private Cliente logarCliente(long chatIdCliente) {
 		Cliente cliente = clientes.get("" + chatIdCliente);
 		

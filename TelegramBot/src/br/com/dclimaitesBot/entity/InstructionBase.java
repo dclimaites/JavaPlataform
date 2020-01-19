@@ -5,7 +5,12 @@ import com.pengrad.telegrambot.model.request.ReplyKeyboardMarkup;
 import com.pengrad.telegrambot.request.SendMessage;
 
 import br.com.dclimaitesBot.interfaces.Instruction;
-
+/**
+ * 
+ * @author Diego Climaites
+ * Interface para implementação das instruções executadas pelo BOT
+ * @param <T>
+ */
 public abstract class InstructionBase<T> implements Instruction {
 	protected Cliente cliente;
 	private T dado;
