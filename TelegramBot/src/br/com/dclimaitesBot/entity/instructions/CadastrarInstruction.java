@@ -11,12 +11,24 @@ import br.com.dclimaitesBot.entity.Cliente;
 import br.com.dclimaitesBot.entity.InstructionBase;
 import br.com.dclimaitesBot.contas.exception.TipoContaNaoEncontradoException;
 
+/**
+ * Instrução para cadastramento de conta do cliente
+ * @author Diego Climaites
+ *
+ */
 public class CadastrarInstruction extends InstructionBase<String> {
 
+	/**
+	 * 
+	 * @param Dados do cliente que será cadastrado.
+	 */
 	public CadastrarInstruction(Cliente cliente) {
 		super(cliente);
 	}
 
+	/**
+	 * Realiza o processamento de cadastro
+	 */
 	@Override
 	public SendMessage processar() throws TipoContaNaoEncontradoException {
 		// TODO Auto-generated method stub

@@ -1,5 +1,10 @@
 package br.com.dclimaitesBot.contas.exception;
 
+/**
+ * Exceção para tratamento de saldo insuficiente na conta
+ * @author Diego Climaites
+ *
+ */
 public class SaldoInsuficienteException extends Exception {
 
 	/**

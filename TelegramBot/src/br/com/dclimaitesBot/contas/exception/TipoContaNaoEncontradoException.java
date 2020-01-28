@@ -1,5 +1,10 @@
 package br.com.dclimaitesBot.contas.exception;
 
+/**
+ * Exceção para mensagem quando o tipo de conta não for encontrado
+ * @author Diego Climaites
+ *
+ */
 public class TipoContaNaoEncontradoException extends Exception {
 
 	private static final long serialVersionUID = 1L;

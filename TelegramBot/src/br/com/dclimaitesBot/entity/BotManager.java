@@ -41,7 +41,7 @@ public class BotManager extends TimerTask {
 
 	@Override
 	/**
-	 * Execução do BOT
+	 * Execução do BOT, método herdado da classe TimerTask.
 	 */
 	public void run() {
 

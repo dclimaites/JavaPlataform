@@ -2,7 +2,11 @@ package br.com.dclimaitesBot.contas.modelos;
 
 import br.com.dclimaitesBot.contas.exception.SaldoInsuficienteException;
 import br.com.dclimaitesBot.contas.interfaces.Tributavel;
-
+/**
+ * Classe que especifica conta corrente
+ * @author Diego Climaites
+ *
+ */
 public class ContaCorrente extends Conta implements Tributavel {
 
 	@Override

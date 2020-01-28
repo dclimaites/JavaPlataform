@@ -1,6 +1,10 @@
 package br.com.dclimaitesBot.contas.modelos;
 
-
+/**
+ * Classe que especifica conta poupança
+ * @author Diego Climaites
+ *
+ */
 public class ContaPoupanca extends Conta {
 
 	@Override

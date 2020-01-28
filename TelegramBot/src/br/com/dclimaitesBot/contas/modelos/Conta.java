@@ -1,7 +1,11 @@
 package br.com.dclimaitesBot.contas.modelos;
 
 import br.com.dclimaitesBot.contas.exception.SaldoInsuficienteException;
-
+/**
+ * Classe com as informações de conta
+ * @author Diego Climaites
+ *
+ */
 public abstract class Conta implements Comparable<Conta> {
 
 	private double saldo;
@@ -40,21 +44,33 @@ public abstract class Conta implements Comparable<Conta> {
 	private int numero;
 	private String titular;
 	private String agencia;
-
+	/**
+	 * Deposita valor na conta do cliente, aumentando o saldo
+	 * @param valor a depositar
+	 */
 	public void deposita(double valor) {
 		if (valor < 0)
 			throw new IllegalArgumentException("o valor deve ser maior que zero");
 		
 		this.saldo += valor;
 	}
-
+	/**
+	 * Saca o valor do saldo do cliente, podendo emitir uma exceção caso o valor seja maior que o saldo disponível na conta
+	 * @param Valor a ser sacado.
+	 * @throws SaldoInsuficienteException
+	 */
 	public void saca(double valor) throws SaldoInsuficienteException {
 		if(valor > saldo)
 			throw new SaldoInsuficienteException(valor);
 		
 		this.saldo -= valor;
 	}
-
+	/**
+	 * Transfere o valor da conta atual para a conta destino, podendo emitir uma exceção caso o valor seja maior que o saldo disponível na conta
+	 * @param Valor a ser transferido
+	 * @param conta destino que receberá o valor
+	 * @throws SaldoInsuficienteException 
+	 */
 	public void transfere(double valor, Conta conta) throws SaldoInsuficienteException {
 		this.saca(valor);
 		if (conta != null)
